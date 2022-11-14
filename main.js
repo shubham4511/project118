@@ -15,7 +15,7 @@ function preload(){
 }
 function draw(){
     strokeWeight(13);
-    stroke(0);
+    stroke("black");
     if(mouseIsPressed){
     line(pmouseX,pmouseY,mouseX,mouseY);
     }
@@ -29,7 +29,7 @@ function draw(){
 }
 function check_sketch(){
     timer_counter++
-    document.getElementById("Timer").innerHTML="Timer:"+timer_counter;
+    document.getElementById("timer").innerHTML="timer:"+timer_counter;
     if(timer_counter>400){
         document.getElementById("your_sketch").innerHTML="Your Sketch:";
         ducument.getElementById("confidence").innerHTML="Confidence:";
@@ -42,7 +42,7 @@ function check_sketch(){
     if(timer_check="completed"||answer_holder=="set"){
         timer_check="";
         answer_holder="";
-        updatCanvas();
+        updateCanvas();
 
     }
 }
